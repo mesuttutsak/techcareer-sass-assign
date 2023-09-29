@@ -1,0 +1,39 @@
+@import './reset.scss';
+@import './variables.scss';
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    position: relative;
+    // flex: 1;
+
+    aside {
+        display: flex;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: $coloredBg;
+        
+        height: 100%;
+        width: 272px;
+        
+        nav {
+        }
+    }
+
+    main {
+        flex: 1;
+        padding-left: 272px;
+
+        section {
+            border-bottom: 1px solid;
+            min-height: 30vh;
+        }
+    }
+}
