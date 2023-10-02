@@ -7,20 +7,29 @@ html {
     font-family: $fontPrimary;
 }
 
-* {
-    color: $textDefault;
-}
+* {}
 
 body {
     display: flex;
     min-height: 100vh;
     min-width: 100vw;
     position: relative;
+    color: $textDefault;
+    font-family: $fontMuli;
 
     h1,
     h2,
     h3 {
+        font-family: $fontPrimary;
+        color: $textSecondary;
         text-transform: uppercase;
+
+        &>* {
+            font-size: inherit;
+            font-weight: inherit;
+            font-family: inherit;
+            text-transform: inherit;
+        }
     }
 
     h1,
@@ -49,15 +58,17 @@ body {
     }
 
     .subheading {
+        font-family: $fontPrimary;
         text-transform: uppercase;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 1.5rem;
-        color: $textSecondary;
+        line-height: 1.5;
         margin-bottom: 1rem;
 
         * {
             text-transform: inherit;
             font-weight: inherit;
+            font-family: inherit;
             font-size: inherit;
         }
     }
@@ -81,10 +92,26 @@ body {
             display: flex;
             flex-direction: column;
 
+            .navbar-toggler {
+                display: none;
+                padding: .25rem .75rem;
+                font-size: 1.25rem;
+                line-height: 1;
+                background-color: transparent;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 0.375rem;
+                transition: box-shadow 0.15s ease-in-out;
+                width: fit-content;
+
+                img {
+                    width: 30px;
+                }
+            }
+
             ul {
                 margin-bottom: auto;
             }
-            
+
             a {
                 cursor: pointer;
                 font-family: $fontMuli;
@@ -100,19 +127,29 @@ body {
                 color: $link;
 
                 &#profile {
-                    display: flex;
-                    align-items: flex-start;
-                    justify-content: center;
+                    display: inline-flex;
+                    width: fit-content;
+                    font-family: $fontMuli;
+                    color: white;
+                    font-size: 20px;
+                    font-weight: 400;
                     margin: auto auto 0;
-                    padding: 0.5rem;
-                    width: 160px;
-                    height: 160px;
+
+                    .name {
+                        display: none;
+                    }
 
                     img {
+                        padding: 0.5rem;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: center;
+                        margin: auto auto 0;
                         border: 0.5rem solid rgba(255, 255, 255, 0.2);
                         overflow: hidden;
                         border-radius: 99999px;
-                        height: auto;
+                        width: 160px;
+                        height: 160px;
                         width: 1000%;
                     }
                 }
@@ -133,13 +170,27 @@ body {
         padding-left: 272px;
 
         section {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
             border-bottom: 1px solid;
             min-height: 100vh;
             padding: 5rem 3rem;
 
+            .content {
+                display: flex;
+                flex-direction: column;
+            }
 
             &:last-child {
                 border-bottom: 0px;
+            }
+
+            &#about {
+                .lead {
+                    font-size: 1.15rem;
+                    font-weight: 400;
+                }
             }
 
             &#experience,
@@ -165,8 +216,38 @@ body {
                 }
 
                 ul.list-inline {
+                    height: 4.5rem;
+
                     li {
                         display: inline-block;
+                    }
+                }
+            }
+
+            ul.withUl {
+                display: flex;
+                flex-direction: column;
+
+                li {
+                    position: relative;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding-left: 2rem;
+
+                    .icon {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: inline-flex;
+                        width: 32px;
+                        height: 24px;
+
+                        img {
+                            display: inline-flex;
+                            margin: auto;
+                            width: 16px;
+                        }
                     }
                 }
             }
@@ -202,4 +283,101 @@ body {
     .text-primary {
         color: $textPrimary;
     }
+
+    @media only screen and (max-width: 992px) {
+        flex-direction: column;
+
+        h1 {
+            font-size: calc(1.725rem + 5.7vw);
+        }
+
+        h2 {
+            font-size: calc(1.475rem + 2.7vw);
+        }
+
+        h2 {
+            font-size: calc(1.325rem + 0.9vw);
+        }
+
+        aside {
+            width: 100%;
+            height: fit-content;
+
+            nav {
+                position: relative;
+                flex-direction: unset;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: 100%;
+                padding: .5rem 1rem;
+                transition: 1s all ease;
+
+                a#profile {
+                    margin: unset;
+                    padding: 0;
+
+                    .name {
+                        display: inline-flex;
+                        align-items: center;
+                    }
+
+                    img {
+                        display: none;
+                    }
+                }
+
+                .navbar-toggler {
+                    display: inline-flex;
+                    height: 40px;
+                }
+
+                ul {
+                    height: 0;
+                    overflow: hidden;
+                    width: 100%;
+                    background: $coloredBg;
+
+                    &.show {
+                        height: unset;
+                        overflow: visible;
+                    }
+
+                    a {
+                        padding: .5rem 0 !important;
+                        text-align: start;
+                    }
+                }
+            }
+
+        }
+
+        main {
+            min-width: 100%;
+            padding-left: 0;
+
+            section {
+                padding-left: 1rem;
+                padding-right: 1rem;
+
+                ul.list {
+                    li {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.underline {
+    text-decoration: underline;
 }

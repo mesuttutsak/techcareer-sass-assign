@@ -1,5 +1,17 @@
+const navList = document.querySelector(`nav ul`);
 const navLinks = document.querySelectorAll(`nav a`);
 const sections = document.querySelectorAll("section[id]");
+const navbarTogglerBtn = document.querySelector(".navbar-toggler");
+
+navbarTogglerBtn.addEventListener("click", function () {
+  const classList = navList.classList;
+
+  if (classList?.value?.includes("show")) {
+    classList.remove("show");
+  } else {
+    classList.add("show");
+  }
+});
 
 window.addEventListener("locationchange", function (e) {
   const hash = e.currentTarget.location.hash;

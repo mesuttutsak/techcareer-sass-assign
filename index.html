@@ -11,14 +11,18 @@
     <aside>
       <nav>
         <a id="profile" href="#">
-            <img
-              class="img-profile"
-              src="./assets/img/profile.jpeg"
-              alt="mesut_tutsak_profile"
-            />
+          <span class="name">Mesut Tutsak</span>
+          <img
+            class="img-profile"
+            src="./assets/img/profile.jpeg"
+            alt="mesut_tutsak_profile"
+          />
         </a>
+        <button class="navbar-toggler">
+          <img src="./assets/svg/button.svg " alt="" />
+        </button>
         <ul>
-          <li><a href="#about">About</a></li>
+          <li><a href="#about" class="active">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#education">Education</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -29,185 +33,189 @@
     </aside>
     <main>
       <section id="about">
-        <h1>
-          Mesut
-          <span class="text-primary">Tutsak</span>
-        </h1>
-        <div class="subheading">
-          İstanbul · Ataşehir ·
-          <a href="tel:+905365633146">+90 (536) 563 3146</a> ·
-          <a class="text-primary" href="mailto:ttsk.mesut@gmail.com"
-            >ttsk.mesut@gmail.com</a
-          >
-        </div>
-        <p>
-          I worked as a Frontend Developer at Mallconomy, which develops
-          marketing technology products. I used the Next.js framework in all of
-          these products. On the product management panel, I used it with
-          React.js and TypeScript. While I preferred Formik for form operations,
-          I used the Yup library for validation. I also had the opportunity to
-          use Redux, Context API, SASS, and Web3 (frontend) technology in
-          projects. I took part in the development of the style architecture
-          (with SASS) of the projects. I have completed a project to experience
-          the features that come with version 13 of Next.js, and I am currently
-          working on another project. I had a chance to experience Storybook,
-          Jest, and react-testing-library in these projects, and I am improving
-          myself on these issues. As my previous work experience, I should
-          mention that I developed various e-commerce and corporate websites for
-          9 months at Ikona Creative. I used vanilla JavaScript in these
-          projects.
-        </p>
-        <div class="social-icons">
-          <a class="social-icon" href="#!">
-            <img src="./assets/svg/linkedin.svg" />
-          </a>
-          <a class="social-icon" href="#!">
-            <img src="./assets/svg/github.svg" />
-          </a>
-          <a class="social-icon" href="#!">
-            <img src="./assets/svg/twitter.svg" />
-          </a>
+        <div class="content">
+          <h1>
+            Mesut
+            <span class="text-primary">Tutsak</span>
+          </h1>
+          <div class="subheading mb-5">
+            Istanbul · Ataşehir ·
+            <a href="tel:+905365633146">+90 (536) 563 3146</a> ·
+            <a class="text-primary underline" href="mailto:ttsk.mesut@gmail.com"
+              >ttsk.mesut@gmail.com</a
+            >
+          </div>
+          <p class="lead mb-5">
+            I worked as a Frontend Developer at Mallconomy, which develops
+            marketing technology products. I used the Next.js framework in all
+            of these products. On the product management panel, I used it with
+            React.js and TypeScript. While I preferred Formik for form
+            operations, I used the Yup library for validation. I also had the
+            opportunity to use Redux, Context API, SASS, and Web3 (frontend)
+            technology in projects. I took part in the development of the style
+            architecture (with SASS) of the projects. I have completed a project
+            to experience the features that come with version 13 of Next.js, and
+            I am currently working on another project. I had a chance to
+            experience Storybook, Jest, and react-testing-library in these
+            projects, and I am improving myself on these issues. As my previous
+            work experience, I should mention that I developed various
+            e-commerce and corporate websites for 9 months at Ikona Creative. I
+            used vanilla JavaScript in these projects.
+          </p>
+          <div class="social-icons">
+            <a
+              class="social-icon"
+              href="https://www.linkedin.com/in/mesut-tutsak-a82a25148/"
+              target="_blank"
+            >
+              <img src="./assets/svg/linkedin.svg" />
+            </a>
+            <a class="social-icon" href="https://github.com/mesuttutsak">
+              <img src="./assets/svg/github.svg" />
+            </a>
+            <a class="social-icon" href="#!">
+              <img src="./assets/svg/twitter.svg" />
+            </a>
+          </div>
         </div>
       </section>
       <section id="experience">
-        <h2>Experience</h2>
-        <ul class="list">
-          <li>
-            <div class="left">
-              <h3>Company</h3>
-              <div class="subheading">Company Subheading</div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
-                fugit perspiciatis rem saepe earum nisi nihil ab error facere
-                architecto quam.
-              </p>
-            </div>
-            <div class="right">
-              <div class="text-primary">March 2013 - Present</div>
-            </div>
-          </li>
-          <li>
-            <div class="left">
-              <h3>Company</h3>
-              <div class="subheading">Company Subheading</div>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
-                fugit perspiciatis rem saepe earum nisi nihil ab error facere
-                architecto quam.
-              </p>
-            </div>
-            <div class="right">
-              <div class="text-primary">March 2013 - Present</div>
-            </div>
-          </li>
-        </ul>
+        <div class="content">
+          <h2 class="mb-5">Experience</h2>
+          <ul class="list">
+            <li>
+              <div class="left">
+                <h3>Frontend Developer</h3>
+                <div class="subheading">Mallconomy</div>
+                <p class="mb-3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
+                  fugit perspiciatis rem saepe earum nisi nihil ab error facere
+                  architecto quam.
+                </p>
+              </div>
+              <div class="right">
+                <div class="text-primary">Dec 2022 - Aug 2023</div>
+              </div>
+            </li>
+            <li>
+              <div class="left">
+                <h3>Frontend Developer</h3>
+                <div class="subheading">Ikona Creative</div>
+                <p class="mb-3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
+                  fugit perspiciatis rem saepe earum nisi nihil ab error facere
+                  architecto quam.
+                </p>
+              </div>
+              <div class="right">
+                <div class="text-primary">Jan 2022 - Dec 2022</div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
       <section id="education">
-        <h2>Education</h2>
-        <ul class="list">
-          <li>
-            <div class="left">
-              <h3>School</h3>
-              <div class="subheading">Education Subheading</div>
-              <div>Frontend Developer</div>
-              <p>GPA: 3.23</p>
-            </div>
-            <div class="right">
-              <div class="text-primary">March 2013 - Present</div>
-            </div>
-          </li>
-        </ul>
+        <div class="content">
+          <h2 class="mb-5">Education</h2>
+          <ul class="list">
+            <li>
+              <div class="left">
+                <h3>Cyprus International University</h3>
+                <div class="subheading">Interior Architecture</div>
+                <p class="mb-3">GPA: 3.38</p>
+              </div>
+              <div class="right">
+                <div class="text-primary">Oct 2015 - Dec 2020</div>
+              </div>
+            </li>
+          </ul>
+        </div>
       </section>
       <section id="skills">
-        <h2>Skills</h2>
-        <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-        <ul class="list-inline">
-          <li>
-            <img src="./assets/svg/html5.svg" />
-          </li>
-          <li>
-            <img src="./assets/svg/css3.svg" />
-          </li>
-          <li>
-            <img src="./assets/svg/js.svg" />
-          </li>
-          <li>
-            <img src="./assets/svg/react.svg" />
-          </li>
-          <li>
-            <img src="./assets/svg/sass.svg" />
-          </li>
-        </ul>
-        <div class="subheading mb-3">Workflow</div>
-        <ul>
-          <li>Mobile-First, Responsive Design</li>
-          <li>Mobile-First, Responsive Design</li>
-          <li>Mobile-First, Responsive Design</li>
-        </ul>
+        <div class="content">
+          <h2 class="mb-5">Skills</h2>
+          <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+          <ul class="list-inline">
+            <li>
+              <img src="./assets/svg/html5.svg" />
+            </li>
+            <li>
+              <img src="./assets/svg/css3.svg" />
+            </li>
+            <li>
+              <img src="./assets/svg/js.svg" />
+            </li>
+            <li>
+              <img src="./assets/svg/react.svg" />
+            </li>
+            <li>
+              <img src="./assets/svg/sass.svg" />
+            </li>
+          </ul>
+          <div class="subheading mb-3">Workflow</div>
+          <ul class="withUl">
+            <li>
+              <span class="icon"> <img src="./assets/svg/check.svg" /> </span>
+              Mobile-First, Responsive Design
+            </li>
+            <li>
+              <span class="icon"> <img src="./assets/svg/check.svg" /> </span>
+              Cross Browser Testing & Debugging
+            </li>
+            <li>
+              <span class="icon"> <img src="./assets/svg/check.svg" /> </span>
+              Cross Functional Teams
+            </li>
+            <li>
+              <span class="icon"> <img src="./assets/svg/check.svg" /> </span>
+              Agile Development & Scrum
+            </li>
+          </ul>
+        </div>
       </section>
       <section id="interests">
-        <h2>Interests</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi beatae
-          reprehenderit ipsam? Quos animi commodi quaerat velit recusandae at!
-          Sequi esse quasi sapiente. Explicabo provident illo debitis? Iusto,
-          ipsum voluptas? Lorem ipsum dolor sit amet consectetur, adipisicing
-          elit. Sequi beatae reprehenderit ipsam? Quos animi commodi quaerat
-          velit recusandae at! Sequi esse quasi sapiente. Explicabo provident
-          illo debitis? Iusto, ipsum voluptas?
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi beatae
-          reprehenderit ipsam? Quos animi commodi quaerat velit recusandae at!
-          Sequi esse quasi sapiente. Explicabo provident illo debitis? Iusto,
-          ipsum voluptas?
-        </p>
+        <div class="content">
+          <h2 class="mb-5">Interests</h2>
+          <p class="mb-3">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+            beatae reprehenderit ipsam? Quos animi commodi quaerat velit
+            recusandae at! Sequi esse quasi sapiente. Explicabo provident illo
+            debitis? Iusto, ipsum voluptas? Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Sequi beatae reprehenderit ipsam?
+            Quos animi commodi quaerat velit recusandae at! Sequi esse quasi
+            sapiente. Explicabo provident illo debitis? Iusto, ipsum voluptas?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi
+            beatae reprehenderit ipsam? Quos animi commodi quaerat velit
+            recusandae at! Sequi esse quasi sapiente. Explicabo provident illo
+            debitis? Iusto, ipsum voluptas?
+          </p>
+        </div>
       </section>
       <section id="awards">
-        <h2>AWARDS & CERTIFICATIONS</h2>
-        <ul class="fa-ul mb-0">
-          <li>
-            <img src="./assets/svg/trophy.svg" />
-            Google Analytics Certified Developer
-          </li>
-          <li>
-            <img src="./assets/svg/trophy.svg" />Mobile Web Specialist - Google
-            Certification
-          </li>
-          <li>
-            <img src="./assets/svg/trophy.svg" />
-            1
-            <sup>st</sup>
-            Place - University of Colorado Boulder - Emerging Tech Competition
-            2009
-          </li>
-          <li>
-            <img src="./assets/svg/trophy.svg" />
-            1
-            <sup>st</sup>
-            Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI
-            Design Category)
-          </li>
-          <li>
-            <img src="./assets/svg/trophy.svg" />
-            2
-            <sup>nd</sup>
-            Place - University of Colorado Boulder - Emerging Tech Competition
-            2008
-          </li>
-          <li>
-            <img src="./assets/svg/trophy.svg" />
-            1
-            <sup>st</sup>
-            Place - James Buchanan High School - Hackathon 2006
-          </li>
-          <li>
-            <img src="./assets/svg/trophy.svg" />
-            3
-            <sup>rd</sup>
-            Place - James Buchanan High School - Hackathon 2005
-          </li>
-        </ul>
+        <div class="content">
+          <h2 class="mb-5">AWARDS & CERTIFICATIONS</h2>
+          <ul class="withUl">
+            <li>
+              <span class="icon"> <img src="./assets/svg/trophy.svg" /> </span>
+              Central Bank of Northern Cyprus National Architectural Competition
+              Project - Project Assistant
+            </li>
+            <li>
+              <span class="icon"> <img src="./assets/svg/trophy.svg" /> </span>
+              CIU GSTMF “Atilla Yücel Sketch Competition” - Mention Award
+            </li>
+            <li>
+              <span class="icon"> <img src="./assets/svg/trophy.svg" /> </span>
+              CIU GSTMF - Honor Certificate x2
+            </li>
+            <li>
+              <span class="icon"> <img src="./assets/svg/trophy.svg" /> </span>
+              CIU GSTMF - High Honor Certificate x4
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
 
