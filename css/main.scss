@@ -1,8 +1,14 @@
-@import './reset.scss';
+@import './font.scss';
 @import './variables.scss';
+@import './reset.scss';
 
 html {
     scroll-behavior: smooth;
+    font-family: $fontPrimary;
+}
+
+* {
+    color: $textDefault;
 }
 
 body {
@@ -10,7 +16,51 @@ body {
     min-height: 100vh;
     min-width: 100vw;
     position: relative;
-    // flex: 1;
+
+    h1,
+    h2,
+    h3 {
+        text-transform: uppercase;
+    }
+
+    h1,
+    .h1 {
+        font-size: 6rem;
+        font-weight: 700;
+    }
+
+    h2,
+    .h2 {
+        font-size: 3.5rem;
+        font-weight: 700;
+    }
+
+    h3,
+    .h3 {
+        line-height: 1.2;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+    }
+
+    .subheading {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1.5rem;
+        color: $textSecondary;
+        margin-bottom: 1rem;
+
+        * {
+            text-transform: inherit;
+            font-weight: inherit;
+            font-size: inherit;
+        }
+    }
 
     aside {
         display: flex;
@@ -19,11 +69,62 @@ body {
         top: 0;
         left: 0;
         background-color: $coloredBg;
-        
+
         height: 100%;
         width: 272px;
-        
+
         nav {
+            width: 100%;
+            padding-left: 0;
+            padding-right: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+
+            ul {
+                margin-bottom: auto;
+            }
+            
+            a {
+                cursor: pointer;
+                font-family: $fontMuli;
+                display: block;
+                text-align: center;
+                padding: 0.5rem;
+                font-weight: 800;
+                line-height: 1.5;
+                letter-spacing: 0.05rem;
+                text-transform: uppercase;
+                text-decoration: none;
+                transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+                color: $link;
+
+                &#profile {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    margin: auto auto 0;
+                    padding: 0.5rem;
+                    width: 160px;
+                    height: 160px;
+
+                    img {
+                        border: 0.5rem solid rgba(255, 255, 255, 0.2);
+                        overflow: hidden;
+                        border-radius: 99999px;
+                        height: auto;
+                        width: 1000%;
+                    }
+                }
+
+                &.active {
+                    color: $linkActive;
+                }
+
+                &:hover {
+                    color: $linkHover;
+                }
+            }
         }
     }
 
@@ -33,7 +134,72 @@ body {
 
         section {
             border-bottom: 1px solid;
-            min-height: 30vh;
+            min-height: 100vh;
+            padding: 5rem 3rem;
+
+
+            &:last-child {
+                border-bottom: 0px;
+            }
+
+            &#experience,
+            &#education,
+            &#skills {
+                ul.list {
+                    li {
+                        display: flex;
+                        margin-bottom: 3rem;
+
+                        .left {
+                            flex-grow: 1;
+                        }
+
+                        .right {
+                            flex-shrink: 0;
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+
+                ul.list-inline {
+                    li {
+                        display: inline-block;
+                    }
+                }
+            }
         }
+
+        .social-icons {
+            .social-icon {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                height: 3.5rem;
+                width: 3.5rem;
+                background-color: #495057;
+                color: #fff;
+                border-radius: 100%;
+                font-size: 1.5rem;
+                margin-right: 1.5rem;
+
+                svg {
+                    color: white;
+                    height: 1em;
+                    overflow: visible;
+                    vertical-align: -.125em;
+
+                    * {
+                        color: inherit;
+                    }
+                }
+            }
+        }
+    }
+
+    .text-primary {
+        color: $textPrimary;
     }
 }

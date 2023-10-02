@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -8,6 +9,7 @@ html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockq
   border: 0;
   font-size: 100%;
   font: inherit;
+  font-family: #343a40;
   vertical-align: baseline;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -55,6 +57,11 @@ a {
 
 html {
   scroll-behavior: smooth;
+  font-family: "Saira Extra Condensed", sans-serif;
+}
+
+* {
+  color: #343a40;
 }
 
 body {
@@ -62,6 +69,44 @@ body {
   min-height: 100vh;
   min-width: 100vw;
   position: relative;
+}
+body h1,
+body h2,
+body h3 {
+  text-transform: uppercase;
+}
+body h1,
+body .h1 {
+  font-size: 6rem;
+  font-weight: 700;
+}
+body h2,
+body .h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+body h3,
+body .h3 {
+  line-height: 1.2;
+  font-size: 2rem;
+  font-weight: 700;
+}
+body p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+body .subheading {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #6c757d;
+  margin-bottom: 1rem;
+}
+body .subheading * {
+  text-transform: inherit;
+  font-weight: inherit;
+  font-size: inherit;
 }
 body aside {
   display: flex;
@@ -72,11 +117,102 @@ body aside {
   height: 100%;
   width: 272px;
 }
+body aside nav {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+body aside nav ul {
+  margin-bottom: auto;
+}
+body aside nav a {
+  cursor: pointer;
+  font-family: Muli, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  display: block;
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  color: rgba(255, 255, 255, 0.55);
+}
+body aside nav a#profile {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: auto auto 0;
+  padding: 0.5rem;
+  width: 160px;
+  height: 160px;
+}
+body aside nav a#profile img {
+  border: 0.5rem solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+  border-radius: 99999px;
+  height: auto;
+  width: 1000%;
+}
+body aside nav a.active {
+  color: rgb(255, 255, 255);
+}
+body aside nav a:hover {
+  color: rgba(255, 255, 255, 0.75);
+}
 body main {
   flex: 1;
   padding-left: 272px;
 }
 body main section {
   border-bottom: 1px solid;
-  min-height: 30vh;
+  min-height: 100vh;
+  padding: 5rem 3rem;
+}
+body main section:last-child {
+  border-bottom: 0px;
+}
+body main section#experience ul.list li, body main section#education ul.list li, body main section#skills ul.list li {
+  display: flex;
+  margin-bottom: 3rem;
+}
+body main section#experience ul.list li .left, body main section#education ul.list li .left, body main section#skills ul.list li .left {
+  flex-grow: 1;
+}
+body main section#experience ul.list li .right, body main section#education ul.list li .right, body main section#skills ul.list li .right {
+  flex-shrink: 0;
+}
+body main section#experience ul.list li:last-child, body main section#education ul.list li:last-child, body main section#skills ul.list li:last-child {
+  margin-bottom: 0;
+}
+body main section#experience ul.list-inline li, body main section#education ul.list-inline li, body main section#skills ul.list-inline li {
+  display: inline-block;
+}
+body main .social-icons .social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: #495057;
+  color: #fff;
+  border-radius: 100%;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+}
+body main .social-icons .social-icon svg {
+  color: white;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -0.125em;
+}
+body main .social-icons .social-icon svg * {
+  color: inherit;
+}
+body .text-primary {
+  color: rgb(189, 93, 56);
 }/*# sourceMappingURL=main.css.map */
